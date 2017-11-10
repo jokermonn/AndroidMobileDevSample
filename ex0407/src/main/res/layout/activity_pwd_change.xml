@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ex0407.PwdChange"
+    tools:ignore="MergeRootFrame" >
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPCTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4.4 用户信息管理（密码修改）"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPCUserName"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="用户名：" />
+
+            <TextView
+                android:id="@+id/tvPCCurrentUN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="zghcas@163.com" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPCOldPwd"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="原密码：" />
+
+            <EditText
+                android:id="@+id/etPCOldPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPassword" >
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPCNewPwd"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="新密码：" />
+
+            <EditText
+                android:id="@+id/etPCNewPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"               
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPCRePwd"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="确认密码：" />
+
+            <EditText
+                android:id="@+id/etPCRePwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnPCOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/btnPCCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="取消" />
+            
+
+        </LinearLayout>
+           <TextView
+                android:id="@+id/tvPCShowInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="信息提示区" />
+    </LinearLayout>
+
+</FrameLayout>
+    

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.ex0407"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".UserLogin"
+            android:label="第四章 数据库开发入门">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ex0407.UserReg"
+            android:label="第四章 数据库开发入门">
+        </activity>
+        <activity
+            android:name="com.example.ex0407.PwdChange"
+            android:label="第四章 数据库开发入门">
+        </activity>
+        <activity
+            android:name="com.example.ex0407.UserManage"
+            android:label="第四章 数据库开发入门">
+        </activity>
+    </application>
+
+</manifest>
