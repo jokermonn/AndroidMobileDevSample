@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ex0607.MainActivity">
+
+    <com.example.ex0607.Circle
+        android:id="@+id/view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_hour"
+        android:layout_width="2dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/hour"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/iv_min"
+        android:layout_width="2dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/min"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/iv_sec"
+        android:layout_width="2dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sec"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@id/view"
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        tools:ignore="ContentDescription"/>
+
+</android.support.constraint.ConstraintLayout>

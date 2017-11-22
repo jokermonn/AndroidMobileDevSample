@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
 /**
@@ -11,22 +12,34 @@ import android.widget.ImageView;
  */
 public class MainActivity extends AppCompatActivity {
     private float scale = 0.1F;
+    private int maxWidth = 0;
+    private int maxHeight = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ConstraintLayout contentCL = findViewById(R.id.cl_content);
+        final ConstraintLayout contentCL = findViewById(R.id.cl_content);
         final ImageView targetIV = findViewById(R.id.iv_target);
-        final int maxWidth = contentCL.getWidth();
-        final int maxHeight = contentCL.getHeight();
 
+        contentCL.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver
+                .OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                maxWidth = contentCL.getWidth();
+                maxHeight = contentCL.getHeight();
+                contentCL.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+        });
         contentCL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (targetIV.getWidth() <= maxWidth && targetIV.getHeight() <= maxHeight) {
-                    targetIV.setScaleX(targetIV.getScaleX() + scale);
-                    targetIV.setScaleY(targetIV.getScaleY() + scale);
+                float scaleX = targetIV.getScaleX() + scale;
+                float scaleY = targetIV.getScaleY() + scale;
+                if (targetIV.getWidth() * scaleX <= maxWidth && targetIV.getHeight() * scaleY <=
+                        maxHeight) {
+                    targetIV.setScaleX(scaleX);
+                    targetIV.setScaleY(scaleY);
                 }
             }
         });

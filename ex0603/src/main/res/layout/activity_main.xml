@@ -28,9 +28,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:inputType="number"
-        android:maxLength="3"
-        android:text="请输入0~1"
+        android:maxLength="5"
+        android:text="0.5"
+        android:hint="请输入0~1"
         app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"/>
@@ -41,7 +41,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:enabled="false"
         android:text="确定"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"/>
